@@ -9,14 +9,12 @@
   fullname,
   hostname,
   stateVersion,
+  timezone,
+  locale,
+  gitUsername,
+  gitEmail,
   ...
 }: 
-let
-  timezone = "Africa/Nairobi";
-  locale = "en_US.UTF-8";
-  gitUsername = "hdengsan";
-  gitEmail = "sanhenden@gmail.com";
-in
 {
   imports = [
     ./hardware.nix

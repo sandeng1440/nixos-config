@@ -3,12 +3,10 @@
   username,
   hostname,
   stateVersion,
+  gitUsername,
+  gitEmail,
   ...
 }:
-let
-  gitUsername = "hdengsan";
-  gitEmail = "sanhenden@gmail.com";
-in
 {
   home = {
     username = "${username}";

@@ -33,8 +33,10 @@ outputs = inputs@{ self, nixpkgs, ... }: {
     browser = "brave";
     hostname = "void";
     systemArch = "x86_64-linux";
-
-    # Don't change the stateVesrsion
+    timezone = "Africa/Nairobi";
+    locale = "en_US.UTF-8";
+    gitUsername = "hdengsan";
+    gitEmail = "sanhenden@gmail.com";
     stateVersion = "23.11";
   in 
   {
@@ -44,9 +46,9 @@ outputs = inputs@{ self, nixpkgs, ... }: {
       specialArgs = {
         inherit (nixpkgs) lib;
         inherit inputs nixpkgs;
-        inherit system;
+        inherit system locale timezone;
         inherit username fullname hostname;
-        inherit editor browser;
+        inherit editor browser gitUsername gitEmail;
         inherit stateVersion;
       };
 
@@ -59,8 +61,8 @@ outputs = inputs@{ self, nixpkgs, ... }: {
             backupFileExtension = "backup";
             users.${username} = import ./hosts/${hostname}/home.nix;
             extraSpecialArgs = {
-              inherit username;
-              inherit hostname;
+              inherit username locale timezone;
+              inherit hostname gitUsername gitEmail;
               inherit inputs;
               inherit system;
               inherit stateVersion;
