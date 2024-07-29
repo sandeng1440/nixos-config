@@ -1,0 +1,19 @@
+{
+lib,
+inputs,
+system,
+config,
+pkgs,
+
+username,
+fullname,
+hostname,
+...
+}: {
+  imports = [
+    ./hardware.nix
+    ./global-config.nix
+  ];
+
+  
+}
