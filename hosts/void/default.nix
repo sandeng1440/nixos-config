@@ -1,19 +1,20 @@
 {
-  lib,
-  inputs,
-  system,
-  config,
-  pkgs,
+lib,
+inputs,
+system,
+config,
+pkgs,
+options,
 
-  username,
-  fullname,
-  hostname,
-  stateVersion,
-  timezone,
-  locale,
-  gitUsername,
-  gitEmail,
-  ...
+username,
+fullname,
+hostname,
+stateVersion,
+timezone,
+locale,
+gitUsername,
+gitEmail,
+...
 }: 
 {
   imports = [
@@ -29,7 +30,7 @@
   boot.kernelPackages = pkgs.linuxPackages_zen;
   # Hostname
   networking.hostName = "${hostname}";
-
+  networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -55,6 +56,8 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  environment.shells = with pkgs; [ zsh bash ];
+  users.defaultUserShell = pkgs.zsh;  
   users.users.${username} = {
     isNormalUser = true;
     description = "${fullname}";
@@ -69,102 +72,41 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #### Core Packages
-    lld
-    gcc
-    glibc
-    clang
-    udev
-    llvmPackages.bintools
-    wget
-    procps
-    killall
-    zip
-    unzip
-    bluez
-    bluez-tools
-    brightnessctl
-    light
-    xdg-utils
-    pipewire
-    wireplumber
-    alsaLib
-    pkg-config
+    lld gcc glibc clang udev llvmPackages.bintools
+    wget procps killall zip unzip bluez
+    bluez-tools brightnessctl light xdg-utils
+    pipewire wireplumber alsaLib pkg-config
 
     #### Standard Packages
-    networkmanager
-    networkmanagerapplet
-    git
-    fzf
-    vim
-    tldr
-    sox
-    yad
-    flatpak
+    networkmanager networkmanagerapplet
+    git fzf vim tldr sox yad flatpak
     ffmpeg
 
     #### GTK
-    gtk2
-    gtk3
-    gtk4
+    gtk2 gtk3 gtk4
 
     #### QT
-    #qtcreator
-    qt5.qtwayland
-    qt6.qtwayland
-    qt6.qmake
-    libsForQt5.qt5.qtwayland
-    qt5ct
+    qtcreator
+    qt5.qtwayland qt6.qtwayland qt6.qmake
+    libsForQt5.qt5.qtwayland qt5ct
 
     #### My Packages
-    neovim
-    stow
+    neovim stow gnumake tree
     
-    helix
-    firefox
-    brave
-    xfce.thunar
-    bat
-    pavucontrol
-    blueman
-    #trash-cli
-    ydotool
-    #cava
-    neofetch
-    cpufetch
-    starship
-    lolcat
-    #gimp
-    transmission-gtk
-    slurp
-    #gparted
-    vlc
-    mpv
-    krabby
-    zellij
-    shellcheck
-    thefuck
-    gthumb
-    #cmatrix
-    lagrange
-    lavat
+    helix firefox brave xfce.thunar bat
+    pavucontrol blueman trash-cli ydotool
+    cava neofetch cpufetch starship lolcat
+    transmission-gtk slurp vlc mpv krabby
+    zellij shellcheck thefuck gthumb cmatrix
+    lagrange lavat
 
     #### My Proprietary Packages
     discord
-    #steam
 
     #### Xorg Stuff :-(
     ## Libraries
     xorg.libX11
     xorg.libXcursor
-    ## Window Managers
-    #awesome
-    ## Desktop Environments
-    #cinnamon.cinnamon-desktop
-    ## Programs
-    #nitrogen
-    #picom
-    #dunst
-    #flameshot
 
     #### Programming Languages
     ## Rust
@@ -197,75 +139,35 @@
     #### Command Shells
     nushell
 
-    #### Display Managers
-    gnome.gdm
-
     #### Hyprland Rice
-    hyprland
-    waybar
-    xwayland
-    cliphist
-    alacritty
-    swww
-    swaynotificationcenter
-    lxde.lxsession
-    #inputs.hyprwm-contrib.packages.${system}.grimblast
-    gtklock
-    eww
-    xdg-desktop-portal-hyprland
+    hyprland waybar xwayland cliphist alacritty swww
+    swaynotificationcenter lxde.lxsession gtklock
+    eww xdg-desktop-portal-hyprland
+    inputs.hyprwm-contrib.packages.${system}.grimblast
 
     ## Hyprdots
-    lsd
-    moreutils
-    pwvucontrol
-    pamixer
-    udiskie
-    dunst
-    swaylock-effects
-    wlogout
-    grimblast
-    hyprpicker
-    slurp
-    swappy
-    polkit_gnome
-    xdg-desktop-portal-hyprland
-    jq
-    imagemagick
-    kdePackages.qtimageformats
-    kdePackages.ffmpegthumbs
-    kdePackages.kde-cli-tools
-    libnotify
-    sddm
-    libsForQt5.qt5.qtquickcontrols
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects
-    libsForQt5.qt5ct    
-    libsForQt5.qtstyleplugin-kvantum
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.qt6ct
-    kdePackages.wayland
-    rofi-wayland
-    nwg-look
-    ark
-    dolphin
-    kitty
-    eza
-    oh-my-zsh
-    zsh
-    zsh-powerlevel10k
+    lsd moreutils pwvucontrol pamixer udiskie dunst swaylock-effects
+    wlogout hyprpicker slurp swappy polkit_gnome
+    xdg-desktop-portal-hyprland jq imagemagick kdePackages.qtimageformats
+    kdePackages.ffmpegthumbs kdePackages.kde-cli-tools libnotify
+    sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct    
+    libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
+    dolphin kitty eza oh-my-zsh zsh zsh-powerlevel10k
     pokemon-colorscripts-mac
+    where-is-my-sddm-theme
   ];
 
   # Font stuff:
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-emoji
-    noto-fonts-cjk
+    noto-fonts noto-fonts-emoji noto-fonts-cjk
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
     symbola noto-fonts-color-emoji material-icons
     font-awesome
   ];
+
 
   # Programs
   programs = {
@@ -273,6 +175,17 @@
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
+    };
+    zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      zsh-autoenv.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [ "git" "history" ];
+      };
     };
     firefox.enable = true;
     dconf.enable = true;
@@ -295,8 +208,9 @@
     displayManager.sddm = {
         enable = true;
         autoNumlock = true;
+        enableHidpi = true;
         wayland.enable = true;
-        theme = "corners";
+        theme = "where-is-my-sddm-theme";
         package = pkgs.sddm;
     };
     xserver = {
