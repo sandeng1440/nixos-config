@@ -25,9 +25,9 @@ sudo nixos-rebuild switch --flake .
 ```
 
 
-# !!!!! IMPORTANT !!!!!
-## THE FOLLOWING WILL DELETE SOME OF YOUR FILES. 
-# !!!!! IMPORTANT !!!!!
+> [!IMPORTANT]
+> THE FOLLOWING WILL DELETE SOME OF YOUR FILES. PROCEED WITH CAUTION. 
+
 ## Hyprdots installation through HyDE-cli
 Clone the [HyDE-cli](https://github.com/kRHYME7/Hyde-cli) repo.
 ```
