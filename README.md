@@ -1,5 +1,7 @@
 # NixOS Flake for Hyprdots
-This flake has been made specifically to try and bring [Hyprdots](https://github.com/prasanthrangan/hyprdots) to NixOS. So far, I have successfully setup hyprdots from the git repo without making big modifications to the hyprdots repo. The most significant modification made is to the `~/.config/hypr/keybindings.conf` so that waybar plays nice. I'll write a bash script to install the dots soon. For now, I'm still working on the flake.
+This flake has been made specifically to try and bring [Hyprdots](https://github.com/prasanthrangan/hyprdots) to NixOS. To make it work, I had to abandon some reproducible parts of the nix flake such as the gtk theme. 
+
+So far, I have successfully setup hyprdots from the git repo without making big modifications to the hyprdots repo. The most significant modification made is to the `~/.config/hypr/keybindings.conf` so that waybar plays nice. I'll write a bash script to install the dots soon. For now, I'm still working on the flake.
 
 # Installation
 ## Flake
@@ -35,3 +37,10 @@ Run the themepatcher for the themes you want. (Check the `themepatcher.lst` for 
 ```
 ./themepatcher "<Your Theme>" "<url to the theme>"
 ```
+
+# TODO
+[] Install sddm theme
+[] Write install script
+[] Make the flake generic
+[] Modularize the flake
+[] Integrate hyprdots with home-manager
