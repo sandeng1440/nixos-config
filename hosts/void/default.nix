@@ -64,7 +64,8 @@ gitEmail,
     description = "${fullname}";
     extraGroups = ["networkmanager" "wheel" "video" "kvm"];
     packages = with pkgs; [
-      papirus-icon-theme
+      # Put your packages here
+      # obsidian neovim stow
     ];
   };
 
@@ -83,7 +84,7 @@ gitEmail,
     #### Standard Packages
     networkmanager networkmanagerapplet
     git fzf vim tldr sox yad flatpak
-    ffmpeg
+    ffmpeg neovim
 
     #### GTK
     gtk2 gtk3 gtk4
@@ -94,62 +95,23 @@ gitEmail,
     libsForQt5.qt5.qtwayland qt5ct
 
     #### My Packages
-    neovim stow gnumake tree
-    where-is-my-sddm-theme
-    
-    helix firefox brave xfce.thunar bat
-    pavucontrol blueman trash-cli ydotool
+    helix xfce.thunar bat
     cava neofetch cpufetch starship lolcat
     transmission-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
     lagrange lavat
 
-    #### My Proprietary Packages
-    discord
-
-    #### Xorg Stuff :-(
-    ## Libraries
+    ## Xorg Libraries
     xorg.libX11
     xorg.libXcursor
 
-    #### Programming Languages
-    ## Rust
-    # cargo
-    # rustc
-    # rustup
-    # rust-analyzer
-    ## Go
-    #go
-    ## R
-    # (pkgs.rWrapper.override {
-    #   packages = with pkgs.rPackages; [
-    #     dplyr
-    #     xts
-    #     ggplot2
-    #     reshape2
-    #   ];
-    # })
-    # (pkgs.rstudioWrapper.override {
-    #   packages = with pkgs.rPackages; [
-    #     dplyr
-    #     xts
-    #     ggplot2
-    #     reshape2
-    #
-    #     rstudioapi
-    #   ];
-    # })
-
-    #### Command Shells
-    nushell
-
-    #### Hyprland Rice
-    ## Hyprdots dependencies
+    ## Other Hyprdots dependencies
     hyprland waybar xwayland cliphist alacritty swww
     swaynotificationcenter lxde.lxsession gtklock
     eww xdg-desktop-portal-hyprland
     inputs.hyprwm-contrib.packages.${system}.grimblast
-
+    where-is-my-sddm-theme firefox brave
+    pavucontrol blueman trash-cli ydotool
     lsd parallel pwvucontrol pamixer udiskie dunst swaylock-effects
     wlogout hyprpicker slurp swappy polkit_gnome libinput-gestures
     xdg-desktop-portal-hyprland jq kdePackages.qtimageformats
@@ -160,7 +122,8 @@ gitEmail,
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
     dolphin kitty eza oh-my-zsh zsh zsh-powerlevel10k
     pokemon-colorscripts-mac envsubst
-    imagemagick
+    imagemagick gnumake tree
+    papirus-icon-theme
   ];
 
   # Font stuff:
