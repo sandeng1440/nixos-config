@@ -39,8 +39,8 @@ Run the themepatcher for the themes you want. (Check the `themepatcher.lst` for 
 ```
 
 # TODO
-- [] Install sddm theme
-- [] Write install script
-- [] Make the flake generic
-- [] Modularize the flake
-- [] Integrate hyprdots with home-manager
+- [ ] Install sddm theme
+- [ ] Write install script
+- [ ] Make the flake generic
+- [ ] Modularize the flake
+- [ ] Integrate hyprdots with home-manager
