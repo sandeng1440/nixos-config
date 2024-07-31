@@ -95,6 +95,7 @@ gitEmail,
 
     #### My Packages
     neovim stow gnumake tree
+    where-is-my-sddm-theme
     
     helix firefox brave xfce.thunar bat
     pavucontrol blueman trash-cli ydotool
@@ -143,24 +144,23 @@ gitEmail,
     nushell
 
     #### Hyprland Rice
+    ## Hyprdots dependencies
     hyprland waybar xwayland cliphist alacritty swww
     swaynotificationcenter lxde.lxsession gtklock
     eww xdg-desktop-portal-hyprland
     inputs.hyprwm-contrib.packages.${system}.grimblast
 
-    ## Hyprdots
     lsd parallel pwvucontrol pamixer udiskie dunst swaylock-effects
     wlogout hyprpicker slurp swappy polkit_gnome libinput-gestures
     xdg-desktop-portal-hyprland jq kdePackages.qtimageformats
     kdePackages.ffmpegthumbs kdePackages.kde-cli-tools libnotify
     sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct    
+    libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
     dolphin kitty eza oh-my-zsh zsh zsh-powerlevel10k
     pokemon-colorscripts-mac envsubst
     imagemagick
-    where-is-my-sddm-theme
   ];
 
   # Font stuff:
