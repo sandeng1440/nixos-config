@@ -19,7 +19,7 @@ gitEmail,
 {
   imports = [
     ./hardware.nix
-    ./gtk.nix
+    #./gtk.nix
     ./nix.nix
     ./boilerplate.nix
     ./bootloader.nix
@@ -57,12 +57,15 @@ gitEmail,
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   environment.shells = with pkgs; [ zsh bash ];
+  environment.localBinInPath = true;
   users.defaultUserShell = pkgs.zsh;  
   users.users.${username} = {
     isNormalUser = true;
     description = "${fullname}";
     extraGroups = ["networkmanager" "wheel" "video" "kvm"];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      papirus-icon-theme
+    ];
   };
 
   # Allow unfree packages
@@ -146,16 +149,17 @@ gitEmail,
     inputs.hyprwm-contrib.packages.${system}.grimblast
 
     ## Hyprdots
-    lsd moreutils pwvucontrol pamixer udiskie dunst swaylock-effects
-    wlogout hyprpicker slurp swappy polkit_gnome
-    xdg-desktop-portal-hyprland jq imagemagick kdePackages.qtimageformats
+    lsd parallel pwvucontrol pamixer udiskie dunst swaylock-effects
+    wlogout hyprpicker slurp swappy polkit_gnome libinput-gestures
+    xdg-desktop-portal-hyprland jq kdePackages.qtimageformats
     kdePackages.ffmpegthumbs kdePackages.kde-cli-tools libnotify
     sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct    
     libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
     dolphin kitty eza oh-my-zsh zsh zsh-powerlevel10k
-    pokemon-colorscripts-mac
+    pokemon-colorscripts-mac envsubst
+    imagemagick
     where-is-my-sddm-theme
   ];
 
@@ -183,7 +187,7 @@ gitEmail,
       syntaxHighlighting.enable = true;
       ohMyZsh = {
         enable = true;
-        theme = "robbyrussell";
+        theme = "refined";
         plugins = [ "git" "history" ];
       };
     };

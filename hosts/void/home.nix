@@ -12,6 +12,11 @@
     username = "${username}";
     homeDirectory = "/home/${username}";
     stateVersion = "${stateVersion}";
+    packages = with pkgs; [
+      #papirus-icon-theme
+      #simple-cursors
+      dconf
+    ];  
   };
   programs = {
     home-manager.enable = true;
