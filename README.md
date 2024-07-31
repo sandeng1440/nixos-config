@@ -52,6 +52,10 @@ Now restore the configs using Hyde-cli.
 ```
 Hyde restore Configs
 ```
+Now use Hyde-cli to patch themes.
+```
+Hyde theme patch
+```
 Now reboot and enjoy your Hyprdots.
 
 ## (Optional) Hyprdots manual installation 
