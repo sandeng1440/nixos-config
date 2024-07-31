@@ -52,6 +52,10 @@ Now restore the configs using Hyde-cli.
 ```
 Hyde restore Configs
 ```
+Then replace the `.config/hypr/keybindings.conf` with `~/nixos-config/setup/keybindings.conf`.
+```
+cp -f ~/nixos-config/setup/keybindings.conf ~/.config/hypr/keybindings.conf
+```
 Now use Hyde-cli to patch themes.
 ```
 Hyde theme patch
