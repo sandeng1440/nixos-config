@@ -10,6 +10,12 @@ and generate the hardware configuration file.
 cp -r hosts/void hosts/<your hostname>
 nixos-generate-config --show-harware-config > hosts/<your hostname>/hardware.nix
 ```
+Then rebuild the system.
+```
+NIX_CONFIG="experimental-features = nix-command flakes" 
+sudo nixos-rebuild switch --flake .
+```
+
 
 # !!!!! IMPORTANT !!!!!
 ## THE FOLLOWING WILL DELETE SOME OF YOUR FILES. 
