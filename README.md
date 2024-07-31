@@ -52,7 +52,7 @@ Now restore the configs using Hyde-cli.
 ```
 Hyde restore Configs
 ```
-Then replace the `.config/hypr/keybindings.conf` with `~/nixos-config/setup/keybindings.conf`. This fixes the bug with waybar, where it is duplicated. The bug is because the name of the `waybar` process is `.waybar-wrapped`. (Execute `ps -a` to confirm)
+Then replace the `~/.config/hypr/keybindings.conf` with `~/nixos-config/setup/keybindings.conf`. This fixes the bug with waybar, where it is duplicated. The bug is because the name of the `waybar` process is `.waybar-wrapped`. (Execute `ps -a` to confirm)
 ```
 cp -f ~/nixos-config/setup/keybindings.conf ~/.config/hypr/keybindings.conf
 ```
