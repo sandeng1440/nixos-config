@@ -44,3 +44,4 @@ Run the themepatcher for the themes you want. (Check the `themepatcher.lst` for 
 - [ ] Make the flake generic
 - [ ] Modularize the flake
 - [ ] Integrate hyprdots with home-manager
+- [ ] Debloat the flake
