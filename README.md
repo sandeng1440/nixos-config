@@ -5,6 +5,12 @@ So far, I have successfully setup hyprdots from the git repo without making big 
 
 # Installation
 ## Flake
+Clone the repo.
+```
+git clone --depth=1 https://github.com/sandeng1440/nixos-config ~/nixos-config
+cd nixos-config
+```
+
 Change the user variables i.e **username, hostname, etc** inside the `flake.nix` file.
 While inside the clone directory, copy the `hosts/void` to `hosts/<your hostname>`.
 and generate the hardware configuration file.
@@ -22,12 +28,37 @@ sudo nixos-rebuild switch --flake .
 # !!!!! IMPORTANT !!!!!
 ## THE FOLLOWING WILL DELETE SOME OF YOUR FILES. 
 # !!!!! IMPORTANT !!!!!
-
-## Hyprdots
-Clone the [Hyprdots](https://github.com/prasanthrangan/hyprdots).
+## Hyprdots installation through HyDE-cli
+Clone the [HyDE-cli](https://github.com/kRHYME7/Hyde-cli) repo.
 ```
-git clone --depth=1 https://github.com/prasanthrangan/hyprdots.git
-cd hyprdots/Scripts
+git clone --depth=1 https://github.com/kRHYME7/Hyde-cli.git ~/Hyde-cli
+```
+Cd into the repo and use `make` to install it.
+```
+cd ~/Hyde-cli
+make LOCAL=1
+```
+Now that Hyde-cli is installed, you may use it to restore the configuration files.
+First clone the [Hyprdots](https://github.com/prasanthrangan/hyprdots) repo in your home directory.
+```
+git clone --depth=1 https://github.com/prasanthrangan/hyprdots.git ~/hyprdots
+```
+Then link the directory to Hyde-cli.
+```
+Hyde-install --dir ~/hyprdots --no-package --link
+```
+It may fail but don't worry, the link has been established, which is the most important.
+Now restore the configs using Hyde-cli.
+```
+Hyde restore Configs
+```
+Now reboot and enjoy your Hyprdots.
+
+## (Optional) Hyprdots manual installation 
+Clone the [Hyprdots](https://github.com/prasanthrangan/hyprdots) repo.
+```
+git clone --depth=1 https://github.com/prasanthrangan/hyprdots.git ~/hyprdots
+cd ~/hyprdots/Scripts
 ```
 Run the `restore_cfg.sh`.
 ```
