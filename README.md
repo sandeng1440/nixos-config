@@ -1,1 +1,2 @@
-# nixos-config
+# NixOS Flake for Hyprdots
+This flake has been made specifically to try and bring Hyprdots to NixOS. So far, I have successfully setup hyprdots from the git repo without making big modifications to the hyprdots repo. The most significant modification made is to the `~/.config/hypr/keybindings.conf` so that waybar plays nice. I'll write a bash script to install the dots soon. For now, I'm still working on the flake.
