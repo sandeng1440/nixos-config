@@ -125,7 +125,7 @@ gitEmail,
     wlogout hyprpicker slurp swappy polkit_gnome libinput-gestures
     xdg-desktop-portal-hyprland jq kdePackages.qtimageformats
     kdePackages.ffmpegthumbs kdePackages.kde-cli-tools libnotify
-    sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
+    kdePackages.sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
@@ -187,7 +187,7 @@ gitEmail,
         enableHidpi = true;
         wayland.enable = true;
         theme = "catppuccin-mocha";
-        package = pkgs.sddm;
+        package = pkgs.kdePackages.sddm;
     };
     xserver = {
       enable = false;
