@@ -88,13 +88,6 @@
   # Enable the OpenSSH daemon
   services.openssh.enable = true;
 
-  # Garbage collection
-  # nix.gc = {
-  #   automatic = true;
-  #   dates = "daily";
-  #   options = "--delete-older-than 3d";
-  # };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

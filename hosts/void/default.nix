@@ -80,6 +80,15 @@ gitEmail,
     wget procps killall zip unzip bluez
     bluez-tools brightnessctl light xdg-utils
     pipewire wireplumber alsaLib pkg-config
+    kdePackages.qtsvg elegant-sddm catppuccin-sddm-corners
+    (callPackage ../../pkgs/sddm-theme.nix {}).sddm-theme-dialog
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      #font = "Noto Sans";
+      #fontSize = "14";
+      #background = "${./sddm-wall.png}";
+      #loginBackground = true;
+    })
 
     #### Standard Packages
     networkmanager networkmanagerapplet
@@ -132,7 +141,7 @@ gitEmail,
     noto-fonts noto-fonts-emoji noto-fonts-cjk
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
     symbola noto-fonts-color-emoji material-icons
-    font-awesome
+    font-awesome atkinson-hyperlegible
   ];
 
 
@@ -177,7 +186,7 @@ gitEmail,
         autoNumlock = true;
         enableHidpi = true;
         wayland.enable = true;
-        theme = "where-is-my-sddm-theme";
+        theme = "where_is_my_sddm_theme";
         package = pkgs.sddm;
     };
     xserver = {
