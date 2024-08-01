@@ -78,7 +78,7 @@ Run the themepatcher for the themes you want. (Check the `themepatcher.lst` for 
 ```
 
 # TODO
-- [ ] Install sddm theme
+- [X] Install sddm theme
 - [ ] Write install script
 - [ ] Make the flake generic
 - [ ] Modularize the flake
