@@ -81,7 +81,7 @@ gitEmail,
     bluez-tools brightnessctl light xdg-utils
     pipewire wireplumber alsaLib pkg-config
     kdePackages.qtsvg elegant-sddm catppuccin-sddm-corners
-    (callPackage ../../pkgs/sddm-theme.nix {}).sddm-theme-dialog
+    (callPackage ../../pkgs/sddm-theme.nix {}).corners
     (catppuccin-sddm.override {
       flavor = "mocha";
       #font = "Noto Sans";
@@ -186,7 +186,8 @@ gitEmail,
         autoNumlock = true;
         enableHidpi = true;
         wayland.enable = true;
-        theme = "catppuccin-mocha";
+        #theme = "catppuccin-mocha";
+	theme = "corners";
         package = pkgs.kdePackages.sddm;
     };
     xserver = {
