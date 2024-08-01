@@ -80,8 +80,10 @@ gitEmail,
     wget procps killall zip unzip bluez
     bluez-tools brightnessctl light xdg-utils
     pipewire wireplumber alsaLib pkg-config
-    kdePackages.qtsvg elegant-sddm catppuccin-sddm-corners
-    (callPackage ../../pkgs/sddm-theme.nix {}).corners
+    kdePackages.qtsvg
+
+    # sddm
+    kdePackages.sddm 
     (catppuccin-sddm.override {
       flavor = "mocha";
       #font = "Noto Sans";
@@ -125,7 +127,7 @@ gitEmail,
     wlogout hyprpicker slurp swappy polkit_gnome libinput-gestures
     xdg-desktop-portal-hyprland jq kdePackages.qtimageformats
     kdePackages.ffmpegthumbs kdePackages.kde-cli-tools libnotify
-    kdePackages.sddm libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtquickcontrols libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
