@@ -186,7 +186,7 @@ gitEmail,
         autoNumlock = true;
         enableHidpi = true;
         wayland.enable = true;
-        theme = "where_is_my_sddm_theme";
+        theme = "catppuccin-mocha";
         package = pkgs.sddm;
     };
     xserver = {
