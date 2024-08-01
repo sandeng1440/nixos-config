@@ -187,7 +187,7 @@ gitEmail,
         enableHidpi = true;
         wayland.enable = true;
         #theme = "catppuccin-mocha";
-	theme = "corners";
+	theme = "catppuccin";
         package = pkgs.kdePackages.sddm;
     };
     xserver = {
