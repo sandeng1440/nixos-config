@@ -27,8 +27,8 @@ inputs = {
 outputs = inputs@{ self, nixpkgs, ... }: {
   nixosConfigurations = 
   let
-    fullname = "Santiago";
-    username = "tiago";
+    fullname = "Test Accs";
+    username = "test1";
     editor = "vim";
     browser = "brave";
     hostname = "void";
