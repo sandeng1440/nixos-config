@@ -53,13 +53,13 @@ outputs = inputs@{ self, nixpkgs, ... }: {
       };
 
       modules = [
-        ./hosts/${hostname}/default.nix
+        ./host/default.nix
         inputs.home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
-            users.${username} = import ./hosts/${hostname}/home.nix;
+            users.${username} = import ./host/home.nix;
             extraSpecialArgs = {
               inherit username locale timezone;
               inherit hostname gitUsername gitEmail;
