@@ -63,6 +63,14 @@ Now use Hyde-cli to patch themes.
 ```
 Hyde theme patch
 ```
+ 
+> [!NOTE]
+> This command has failed a lot for me. If it fails on you, then patch the themes using this script `~/hyprdots/Scripts/themepatcher.sh`. The core hyprdots themes are listed in `~/hyprdots/Scripts/themepatcher.lst`.
+> For example, to patch **Catppuccin Mocha** theme, execute:
+> ```
+> ./themepatcher "Catppuccin Mocha" "https://github.com/prasanthrangan/hyde-themes/tree/Catppuccin-Mocha"
+> ```
+ 
 Now reboot and enjoy your Hyprdots.
 
 ## (Optional) Hyprdots manual installation 
