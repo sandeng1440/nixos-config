@@ -110,7 +110,7 @@ gitEmail,
     cava neofetch cpufetch starship lolcat
     transmission-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
-    lagrange lavat
+    lagrange lavat localsend
 
     ## Xorg Libraries
     xorg.libX11
