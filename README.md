@@ -3,6 +3,7 @@ This flake has been made specifically to try and bring [Hyprdots](https://github
 
 So far, I have successfully setup hyprdots from the git repo without making big modifications to the hyprdots repo. The most significant modification made is to the `~/.config/hypr/keybindings.conf` so that waybar plays nice. I'll write a bash script to install the dots soon. For now, I'm still working on the flake.
 
+![Screenshot](https://github.com/user-attachments/assets/c08cbd70-79d8-4793-a37d-b1452dbadead)
 # Installation
 ## Flake
 Clone the repo.
