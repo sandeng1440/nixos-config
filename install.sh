@@ -19,6 +19,7 @@ echo "Opening flake.nix with nano..."
 sleep 2 && nano ~/nixos-config/flake.nix
 
 ## Flake installation
+sleep 2
 nixos-generate-config --show-hardware-config > ~/nixos-config/host/hardware.nix
 echo "-----------------------------------"
 echo "Rebuilding the nix flake..."
