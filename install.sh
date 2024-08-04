@@ -14,7 +14,7 @@
 ## Variables
 username=$(whoami)
 echo "Cloning nixos-config..."
-git clone https://github.com/sandeng1440/nixos-config.git ~/nixos-config || echo "FATAL ERROR: Git closed" && exit
+git clone https://github.com/sandeng1440/nixos-config.git ~/nixos-config || echo "FATAL ERROR: Git closed"
 echo "Opening flake.nix with nano..."
 sleep 2 && nano ~/nixos-config/flake.nix
 
@@ -26,7 +26,7 @@ sudo nixos-rebuild switch --flake ~/nixos-config
 
 ## Hyde-cli installation
 echo "Cloning Hyde-cli..."
-git clone https://github.com/kRHYME7/Hyde-cli.git ~/Hyde-cli || echo "FATAL ERROR: Git closed" && exit
+git clone https://github.com/kRHYME7/Hyde-cli.git ~/Hyde-cli || echo "FATAL ERROR: Git closed"
 cd ~/Hyde-cli
 make LOCAL=1
 
