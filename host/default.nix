@@ -104,6 +104,7 @@ gitEmail,
     qtcreator
     qt5.qtwayland qt6.qtwayland qt6.qmake
     libsForQt5.qt5.qtwayland qt5ct
+    gsettings-qt
 
     #### My Packages
     helix xfce.thunar bat
@@ -132,7 +133,7 @@ gitEmail,
     libsForQt5.qtstyleplugin-kvantum kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct kdePackages.wayland rofi-wayland nwg-look ark
     dolphin kitty eza oh-my-zsh zsh zsh-powerlevel10k
-    pokemon-colorscripts-mac envsubst
+    pokemon-colorscripts-mac envsubst hyprcursor
     imagemagick gnumake tree
     papirus-icon-theme
   ];
