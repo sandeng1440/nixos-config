@@ -110,7 +110,7 @@ gitEmail,
     #### My Packages
     helix xfce.thunar bat
     cava neofetch cpufetch starship lolcat
-    transmission-gtk slurp vlc mpv krabby
+    transmission_4-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
     lagrange lavat localsend
 
