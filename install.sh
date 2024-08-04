@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i bash -p git gnumake nano
+#! nix-shell -i bash -p bash git gnumake nano
 
 # Development switch
 # read -rp "Install script is incomplete. Exit? [Y/n] " confirm
