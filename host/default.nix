@@ -98,7 +98,7 @@ gitEmail,
     ffmpeg neovim
 
     #### GTK
-    gtk2 gtk3 gtk4 tela-cirle-icon-theme
+    gtk2 gtk3 gtk4 tela-circle-icon-theme
 
     #### QT
     qtcreator
