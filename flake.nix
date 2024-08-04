@@ -27,16 +27,19 @@ inputs = {
 outputs = inputs@{ self, nixpkgs, ... }: {
   nixosConfigurations = 
   let
+    ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
     fullname = "Test Accs";
     username = "test0";
-    editor = "vim";
-    browser = "brave";
     hostname = "void";
     systemArch = "x86_64-linux";
+
     timezone = "Africa/Nairobi";
     locale = "en_US.UTF-8";
     gitUsername = "hdengsan";
     gitEmail = "sanhenden@gmail.com";
+    editor = "vim";
+    browser = "brave";
+    # Do not change this value
     stateVersion = "23.11";
   in 
   {

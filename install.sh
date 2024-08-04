@@ -1,6 +1,21 @@
 # Development switch
-echo "Install script is incomplete. Exiting"
-exit
+read -rp "Install script is incomplete. Exit? [Y/n] " confirm
+if [ -z "$confirm" ]; then 
+	exit
+fi
+if [[ $confirm == "y" || $confirm == "Y" ]]; then 
+	exit
+fi
+#
+
+## Variables
+set -e
+username=$(whoami)
+read -rp "Choose your text editor [ vim ]" editor
+if [ -z "$editor" ]; then
+	editor="vim"
+fi
+if $editor flake.nix; then
 
 ## Flake installation
 cd || exit
