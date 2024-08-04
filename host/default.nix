@@ -99,6 +99,7 @@ gitEmail,
 
     #### GTK
     gtk2 gtk3 gtk4 tela-circle-icon-theme
+    bibata-cursors
 
     #### QT
     qtcreator
