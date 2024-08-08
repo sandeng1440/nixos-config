@@ -67,9 +67,8 @@ Hyde-install --dir ~/hyprdots --no-package --link
 It may fail but don't worry, the link has been established, which is the most important.
 Now restore the configs using hyprdots then Hyde-cli.
 ```
-cd ~/hyprdots/Scripts
-sed '/continue 2/d' restore_cfg.sh > restore_cfg.sh
-./restore_cfg.sh
+sed -i '/continue 2/d' ~/hyprdots/Scripts/restore_cfg.sh
+~/hyprdots/Scripts/restore_cfg.sh
 Hyde restore Config
 ```
 Then replace the `~/.config/hypr/keybindings.conf` with `~/nixos-config/setup/keybindings.conf`. This fixes the bug with waybar, where it is duplicated. The bug is because the name of the `waybar` process is `.waybar-wrapped`. (Execute `ps -a` to confirm)
