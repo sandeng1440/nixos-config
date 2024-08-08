@@ -28,6 +28,7 @@
   # Hardware
   #hardware.opengl.enable = true;
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Enable networking
   networking.networkmanager.enable = true;

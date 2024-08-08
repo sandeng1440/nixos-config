@@ -147,13 +147,6 @@ gitEmail,
     defaultNetwork.settings.dns_enabled = true;
   };
   
-  # Bluetooth
-  hardware = {
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = true;
-  };
-
-  #drivers.intel.enable = true;
   #vm.guest-services.enable = false;
   #local.hardware-clock.enable = false;
 
