@@ -19,7 +19,7 @@ gitEmail,
 {
   imports = [
     ./hardware.nix
-    #./gtk.nix
+    ./gtk.nix
     ./nix.nix
     ./boilerplate.nix
     ./bootloader.nix
