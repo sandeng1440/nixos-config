@@ -32,7 +32,6 @@ Change the user variables i.e **username, hostname, etc** inside the `flake.nix`
 While inside the clone directory, copy the `hosts/void` to `hosts/<your hostname>`.
 and generate the hardware configuration file.
 ```
-cp -r hosts/void hosts/<your hostname>
 nixos-generate-config --show-harware-config > host/hardware.nix
 ```
 Then rebuild the system.
