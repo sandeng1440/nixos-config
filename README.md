@@ -113,3 +113,4 @@ Run the themepatcher for the themes you want. (Check the `themepatcher.lst` for 
 - [ ] Modularize the flake
 - [ ] Integrate hyprdots with home-manager
 - [ ] Debloat the flake
+- [ ] Move to stable hyprland and stable nix pkgs
