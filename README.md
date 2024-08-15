@@ -29,8 +29,11 @@ cd nixos-config
 ```
 
 Change the user variables i.e **username, hostname, etc** inside the `flake.nix` file.
-While inside the clone directory, copy the `hosts/void` to `hosts/<your hostname>`.
-and generate the hardware configuration file.
+```
+nvim flake.nix
+```
+While inside the clone directory,
+generate the hardware configuration file.
 ```
 nixos-generate-config --show-hardware-config > host/hardware.nix
 ```
