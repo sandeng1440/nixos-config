@@ -40,7 +40,7 @@
     gsettings-qt
 
     #### My Packages
-    helix xfce.thunar bat
+    helix xfce.thunar bat discord
     cava neofetch cpufetch starship lolcat
     transmission_4-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
