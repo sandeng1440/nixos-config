@@ -3,21 +3,17 @@ description = "Santiago's nixos config";
 
 inputs = {
   nixpkgs.url = "github:NixOs/nixpkgs/nixos-unstable";
-
   home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
   };
-
   hyprland = {
     url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
-
   hyprland-plugins = {
     url = "github:hyprwm/hyprland-plugins";
     inputs.hyprland.follows = "hyprland";
   }; 
-
   hyprwm-contrib = {
     url = "github:hyprwm/contrib";
     inputs.nixpkgs.follows = "nixpkgs";
