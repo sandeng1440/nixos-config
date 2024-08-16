@@ -44,7 +44,7 @@
     cava neofetch cpufetch starship lolcat
     transmission_4-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
-    lagrange lavat localsend obs-studio obsidion
+    lagrange lavat localsend obs-studio obsidian
 
     ## Xorg Libraries
     xorg.libX11
