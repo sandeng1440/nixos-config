@@ -7,21 +7,21 @@ inputs = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
   };
-  hyprland = {
-    url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-  };
-  hyprland-plugins = {
-    url = "github:hyprwm/hyprland-plugins";
-    inputs.hyprland.follows = "hyprland";
-  }; 
+  #hyprland = {
+    #url = "github:hyprwm/Hyprland";
+    #url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+  #};
+  #hyprland-plugins = {
+    #url = "github:hyprwm/hyprland-plugins";
+    #inputs.hyprland.follows = "hyprland";
+  #}; 
   hyprwm-contrib = {
     url = "github:hyprwm/contrib";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 };
 
-outputs = inputs@{ self, nixpkgs, ... }: {
-  nixosConfigurations = 
+outputs = inputs@{ self, nixpkgs, ... }:
   let
     ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
     fullname = "Test Accs";
@@ -37,11 +37,10 @@ outputs = inputs@{ self, nixpkgs, ... }: {
     browser = "brave";
     # Do not change this value
     stateVersion = "23.11";
-  in 
-  {
+  in {
+  nixosConfigurations = { 
     ${hostname} = nixpkgs.lib.nixosSystem rec {
       system = "${systemArch}";
-
       specialArgs = {
         inherit (nixpkgs) lib;
         inherit inputs nixpkgs;
