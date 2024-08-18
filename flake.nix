@@ -36,7 +36,7 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, ... }:
     gitEmail = "sanhenden@gmail.com";
     editor = "vim";
     browser = "brave";
-    # Do not change this value
+
     stateVersion = "23.11";
   in {
   nixosConfigurations = { 
@@ -70,7 +70,8 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, ... }:
     };
   };
   homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    modules = [ ./host/home.nix { home.packages = [ devenv ]; } ];
+    pkgs = nixpkgs.legacyPackages.${systemArch};
+    modules = [ ./home.nix { home.packages = [ devenv.outputs.packages.${systemArch}.default ]; } ];
     extraSpecialArgs = {
       system = "${systemArch}";
       inherit username timezone gitUsername gitEmail;

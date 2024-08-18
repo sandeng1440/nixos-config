@@ -9,7 +9,7 @@
 }:
 {
 imports = [
-  ./nix.nix
+  ./home-manager/home-nix.nix
 ];
 home = {
   username = "${username}";
