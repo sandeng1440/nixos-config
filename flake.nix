@@ -7,6 +7,7 @@ inputs = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+  devenv.url = "tarball+https://install.devenv.sh/latest";
   #hyprland = {
     #url = "github:hyprwm/Hyprland";
     #url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -21,7 +22,7 @@ inputs = {
   };
 };
 
-outputs = inputs@{ self, nixpkgs, ... }:
+outputs = inputs@{ self, nixpkgs, devenv, home-manager, ... }:
   let
     ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
     fullname = "Test Accs";
@@ -52,22 +53,28 @@ outputs = inputs@{ self, nixpkgs, ... }:
 
       modules = [
         ./host/default.nix
-        inputs.home-manager.nixosModules.home-manager {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            backupFileExtension = "backup";
-            users.${username} = import ./host/home.nix;
-            extraSpecialArgs = {
-              inherit username locale timezone;
-              inherit hostname gitUsername gitEmail;
-              inherit inputs;
-              inherit system;
-              inherit stateVersion;
-            };
-          };
-        }
+        #inputs.home-manager.nixosModules.home-manager {
+          #home-manager = {
+            #useGlobalPkgs = true;
+            #useUserPackages = true;
+            #backupFileExtension = "backup";
+            #users.${username} = import ./host/home.nix;
+            #extraSpecialArgs = {
+              #inherit username locale timezone;
+              #inherit hostname gitUsername gitEmail;
+              #inherit inputs system stateVersion;
+            #};
+          #};
+        #}
       ];
+    };
+  };
+  homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+    modules = [ ./host/home.nix { home.packages = [ devenv ]; } ];
+    extraSpecialArgs = {
+      system = "${systemArch}";
+      inherit username timezone gitUsername gitEmail;
+      inherit hostname inputs locale stateVersion;
     };
   };
 };

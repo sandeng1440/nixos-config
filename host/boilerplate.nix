@@ -39,8 +39,18 @@
   # XDG Desktop Portal stuff
   xdg.portal = {
     enable = true;
-    gtkUsePortal = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-wlr ];
+    wlr.enable = true;
+    #gtkUsePortal = true;
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal-gtk xdg-desktop-portal-wlr 
+      xdg-desktop-portal xdg-desktop-portal-hyprland
+    ];
+    configPackages = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal
+      xdg-desktop-portal-hyprland
+    ];
   };
 
   # Printing support

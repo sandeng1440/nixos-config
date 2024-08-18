@@ -19,7 +19,6 @@ gitEmail,
 {
   imports = [
     ./hardware.nix
-    ./gtk.nix
     ./nix.nix
     ./boilerplate.nix
     ./bootloader.nix
@@ -151,15 +150,6 @@ gitEmail,
   
   #vm.guest-services.enable = false;
   #local.hardware-clock.enable = false;
-
-  # Home manager options
-  home-manager.users.${username} = {
-    programs.waybar = {
-      enable = true;
-      # package = inputs.hyprland.packages.${system}.waybar-hyprland;
-      package = pkgs.waybar;
-    };
-  };
 
   # Package overlays:
   nixpkgs.overlays = [
