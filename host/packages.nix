@@ -9,10 +9,10 @@
   environment.systemPackages = with pkgs; [
     #### Core Packages
     lld gcc glibc clang udev llvmPackages.bintools
-    wget procps killall zip unzip bluez
+    wget procps killall zip unzip bluez busybox
     bluez-tools brightnessctl light xdg-utils
     pipewire wireplumber alsaLib pkg-config
-    kdePackages.qtsvg polkit_gnome
+    kdePackages.qtsvg polkit_gnome usbutils
 
     # sddm
     kdePackages.sddm 
