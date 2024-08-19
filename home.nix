@@ -28,22 +28,22 @@ home = {
     x11.enable = true;
   };
 };
-#gtk = {
-  #enable = true;
-  #theme = {
-    #name = "Wallbash-Gtk";
+gtk = {
+  enable = true;
+  theme = {
+    name = "Wallbash-Gtk";
     #package = pkgs.cinnamon.mint-themes;
-  #};
-  #iconTheme = {
-    #name = "Tela-circle-dracula";
-    #package = pkgs.tela-circle-icon-theme;
-  #};
+  };
+  iconTheme = {
+    name = "Tela-circle-dracula";
+    package = pkgs.tela-circle-icon-theme;
+  };
   #font = {
     #name = "JetBrainsMono Nerd Font";
     #name = "Cantarell";
     #size = 11;
   #};
-#};
+};
 programs = {
   home-manager.enable = true;
   git = {
