@@ -12,8 +12,7 @@
     wget procps killall zip unzip bluez busybox
     bluez-tools brightnessctl light xdg-utils
     pipewire wireplumber alsaLib pkg-config
-    kdePackages.qtsvg polkit_gnome usbutils
-    lxqt.lxqt-policykit
+    kdePackages.qtsvg usbutils lxqt.lxqt-policykit    
 
     # sddm
     kdePackages.sddm 
