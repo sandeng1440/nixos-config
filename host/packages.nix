@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  system,
   ...
 }:
 {

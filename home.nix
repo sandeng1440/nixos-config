@@ -5,13 +5,19 @@ hostname,
 stateVersion,
 gitUsername,
 gitEmail,
+inputs,
+system,
 ...
 }:
 {
 imports = [
   ./home-manager/home-nix.nix
 ];
-home = {
+home = 
+let
+  zen = inputs.zen-browser.packages."${system}".generic;
+in
+{
   username = "${username}";
   homeDirectory = "/home/${username}";
   stateVersion = "${stateVersion}";
@@ -19,6 +25,7 @@ home = {
     #papirus-icon-theme
     #simple-cursors
     dconf
+    "${zen}"
   ];  
   pointerCursor = {
     name = "Bibata-Modern-Ice";

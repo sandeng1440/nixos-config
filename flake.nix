@@ -7,6 +7,7 @@ inputs = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
   };
+  zen-browser.url = "github:MarceColl/zen-browser-flake";
   devenv.url = "tarball+https://install.devenv.sh/latest";
   #hyprland = {
     #url = "github:hyprwm/Hyprland";
@@ -22,7 +23,7 @@ inputs = {
   };
 };
 
-outputs = inputs@{ self, nixpkgs, devenv, home-manager, ... }:
+outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
   let
     ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
     fullname = "Test Accs";
