@@ -72,7 +72,7 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
   };
   homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
     pkgs = nixpkgs.legacyPackages.${systemArch};
-    modules = [ ./home.nix { home.packages = [ devenv.outputs.packages.${systemArch}.default ]; } ];
+    modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${systemArch}.default ]; } ];
     extraSpecialArgs = {
       system = "${systemArch}";
       inherit username timezone gitUsername gitEmail;
