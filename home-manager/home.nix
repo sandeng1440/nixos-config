@@ -11,7 +11,7 @@ system,
 }:
 {
 imports = [
-  ./home-manager/home-nix.nix
+  ./home-nix.nix
 ];
 home = 
 let
