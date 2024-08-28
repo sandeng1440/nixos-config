@@ -51,6 +51,14 @@ gtk = {
     #size = 11;
   #};
 };
+qt = {
+  enable = true;
+  platformTheme = "gtk";
+  style = {
+    name = "adwaita-dark";
+    package = pkgs.adwaita-qt;
+  };
+};
 programs = {
   home-manager.enable = true;
   git = {
