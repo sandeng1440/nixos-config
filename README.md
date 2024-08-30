@@ -73,7 +73,7 @@ Then link the directory to Hyde-cli.
 ```
 Hyde-install --dir ~/hyprdots --no-package --link
 ```
-It may fail but don't worry, the link has been established, which is the most important.
+It will fail but don't worry, the link has been established, which is the important part.
 Now restore the configs using hyprdots then Hyde-cli.
 ```
 sed -i '/continue 2/d' ~/hyprdots/Scripts/restore_cfg.sh
