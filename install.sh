@@ -2,14 +2,14 @@
 #! nix-shell -i bash -p bash git gnumake nano
 
 # Development switch
-# read -rp "Install script is incomplete. Exit? [Y/n] " confirm
-# if [ -z "$confirm" ]; then 
-# 	exit
-# fi
-# if [[ $confirm == "y" || $confirm == "Y" ]]; then 
-# 	exit
-# fi
-#
+ read -rp "Install script is incomplete. Exit? [Y/n] " confirm
+ if [ -z "$confirm" ]; then 
+ 	exit
+ fi
+ if [[ $confirm == "y" || $confirm == "Y" ]]; then 
+ 	exit
+ fi
+
 
 ## Variables
 username=$(whoami)
