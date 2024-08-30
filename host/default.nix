@@ -19,11 +19,12 @@ gitEmail,
 {
   imports = [
     ./hardware.nix
-    ./nix.nix
-    ./boilerplate.nix
-    ./bootloader.nix
-    ./env-vars.nix
-    ./packages.nix
+    ./modules/default.nix
+    #./nix.nix
+    #./boilerplate.nix
+    #./bootloader.nix
+    #./env-vars.nix
+    #./packages.nix
   ];
 
   # Hostname
