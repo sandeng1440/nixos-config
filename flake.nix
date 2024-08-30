@@ -4,7 +4,7 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
   let
     ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
     fullname = "Test Accs";
-    username = "test1";
+    username = "test2";
     hostname = "nixos";
     systemArch = "x86_64-linux";
 
