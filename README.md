@@ -47,7 +47,7 @@ Rebuild the home-manager configuration. For this command to succeed, delete `~/.
 `~/.config/gtk-3.0/`, `~/.config/gtk-4.0/`
 
 ```
-nix run home-manager/master --accept-flake-config -- switch --flake .
+home-manager switch --flake .
 ```
 
 
