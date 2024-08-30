@@ -37,10 +37,10 @@ generate the hardware configuration file.
 ```
 nixos-generate-config --show-hardware-config > host/hardware.nix
 ```
-Then rebuild the system.
+Then rebuild the system. (Replace `<hostname>` with your hostname)
 ```
 NIX_CONFIG="experimental-features = nix-command flakes" 
-sudo nixos-rebuild switch --flake .
+sudo nixos-rebuild switch --flake .#<hostname>
 ```
 
 Rebuild the home-manager configuration. For this command to succeed, delete `~/.icons/`,`~/.gtkrc-2.0`,
