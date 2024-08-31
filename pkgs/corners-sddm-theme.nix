@@ -1,6 +1,6 @@
-{ stdenv, fetchFromGitHub, pkgs }:
+{ stdenvNoCC, fetchFromGitHub, pkgs, ...}:
 {
-  pkgs.stdenvNoCC.mkDerivation rec {
+  stdenvNoCC.mkDerivation rec {
     pname = "sddm-theme-corners";
     dontBuild = true;
     installPhase = ''

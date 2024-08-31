@@ -100,14 +100,6 @@ gitEmail,
 
   # Services to start
   services = {
-    displayManager.sddm = {
-        enable = true;
-        autoNumlock = true;
-        enableHidpi = true;
-        wayland.enable = true;
-        theme = "catppuccin-mocha";
-        package = pkgs.kdePackages.sddm;
-    };
     xserver = {
       enable = false;
       #desktopManager.cinnamon.enable = false;

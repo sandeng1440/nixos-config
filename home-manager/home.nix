@@ -21,6 +21,7 @@ in
   username = "${username}";
   homeDirectory = "/home/${username}";
   stateVersion = "${stateVersion}";
+
   packages = with pkgs; [
     #papirus-icon-theme
     #simple-cursors

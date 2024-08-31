@@ -16,16 +16,6 @@
     kdePackages.qtsvg usbutils lxqt.lxqt-policykit    
     home-manager
 
-    # sddm
-    kdePackages.sddm 
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-      #font = "Noto Sans";
-      #fontSize = "14";
-      #background = "${./sddm-wall.png}";
-      #loginBackground = true;
-    })
-
     #### Standard Packages
     networkmanager networkmanagerapplet
     git fzf vim tldr sox yad flatpak
