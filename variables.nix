@@ -7,8 +7,8 @@ system = "x86_64-linux";
 
 timezone = "Africa/Nairobi";
 locale = "en_US.UTF-8";
-gitUsername = "hdengsan";
-gitEmail = "sanhenden@gmail.com";
+gitUsername = "sandeng1440";
+gitEmail = "sandeng1440@gmail.com";
 editor = "vim";
 browser = "brave";
 
