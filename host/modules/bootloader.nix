@@ -1,10 +1,7 @@
 {
-  lib,
-  config,
-  pkgs,
-  system,
-  inputs,
-  ...
+config,
+pkgs,
+...
 }:
 
 {

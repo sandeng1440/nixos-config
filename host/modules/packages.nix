@@ -1,9 +1,11 @@
 {
-  pkgs,
-  inputs,
-  system,
-  ...
+pkgs,
+inputs,
+...
 }:
+let
+  inherit (import ../../variables.nix) system;
+in
 {
   # List packages installed in system profile. To search, run:
   # $ nix search wget

@@ -2,31 +2,14 @@
 description = "Santiago's nixos config";
 outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
   let
-    ##### WARNING: MAKE SURE YOU SET THESE VARIABLES TO THE CORRECT VALUES BEFORE BUILDING THE FLAKE
-    fullname = "Test Accs";
-    username = "test2";
-    hostname = "nixos";
-    systemArch = "x86_64-linux";
-
-    timezone = "Africa/Nairobi";
-    locale = "en_US.UTF-8";
-    gitUsername = "hdengsan";
-    gitEmail = "sanhenden@gmail.com";
-    editor = "vim";
-    browser = "brave";
-
-    stateVersion = "23.11";
+    inherit (import ./variables.nix) hostname system username;
   in {
   nixosConfigurations = { 
     ${hostname} = nixpkgs.lib.nixosSystem rec {
-      system = "${systemArch}";
+      inherit system;
       specialArgs = {
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs;
-        inherit system locale timezone;
-        inherit username fullname hostname;
-        inherit editor browser gitUsername gitEmail;
-        inherit stateVersion;
+        inherit inputs;
       };
 
       modules = [
@@ -48,12 +31,10 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
     };
   };
   homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    pkgs = nixpkgs.legacyPackages.${systemArch};
-    modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${systemArch}.default ]; } ];
+    pkgs = nixpkgs.legacyPackages.${system};
+    modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${system}.default ]; } ];
     extraSpecialArgs = {
-      system = "${systemArch}";
-      inherit username timezone gitUsername gitEmail;
-      inherit hostname inputs locale stateVersion;
+      inherit system inputs;
     };
   };
 };

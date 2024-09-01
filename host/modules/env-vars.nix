@@ -1,16 +1,12 @@
 {
-  lib,
-  system,
-  config,
-  pkgs,
-  inputs,
-
-  username,
-
-  editor,
-  browser,
-  ...
-}: {
+lib,
+pkgs,
+...
+}: 
+let
+  inherit (import ../../variables.nix) username editor browser;
+in
+{
   environment.variables = {
     STARSHIP_CONFIG = "/home/${username}/.config/starship/starship.toml";
     EDITOR = "${editor}";

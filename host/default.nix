@@ -1,21 +1,13 @@
 {
 lib,
 inputs,
-system,
-config,
 pkgs,
 options,
-
-username,
-fullname,
-hostname,
-stateVersion,
-timezone,
-locale,
-gitUsername,
-gitEmail,
 ...
 }: 
+let
+  inherit (import ../variables.nix) username fullname hostname system timezone locale stateVersion;
+in
 {
   imports = [
     ./hardware.nix

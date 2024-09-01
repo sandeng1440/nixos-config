@@ -1,10 +1,6 @@
 {
-  lib,
-  pkgs,
-  config,
-  inputs,
-  system,
-  ...
+pkgs,
+...
 }: {
   # Enable EnvFS
   services.envfs.enable = true;

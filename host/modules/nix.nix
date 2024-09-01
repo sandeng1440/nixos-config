@@ -1,10 +1,6 @@
 {
-  lib,
-  inputs,
-  system,
-  config,
-  pkgs,
-  ...
+pkgs,
+...
 }: {
 nix = {
   package = pkgs.nixFlakes;

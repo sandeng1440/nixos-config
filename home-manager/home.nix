@@ -1,14 +1,11 @@
 {
 pkgs,
-username,
-hostname,
-stateVersion,
-gitUsername,
-gitEmail,
 inputs,
-system,
 ...
 }:
+let
+  inherit (import ../variables.nix) system username gitUsername gitEmail stateVersion;
+in
 {
 imports = [
   ./home-nix.nix
