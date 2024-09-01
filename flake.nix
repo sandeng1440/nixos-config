@@ -3,13 +3,20 @@ description = "Santiago's nixos config";
 outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
   let
     inherit (import ./variables.nix) hostname system username;
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
+      };
+    };
   in {
   nixosConfigurations = { 
     ${hostname} = nixpkgs.lib.nixosSystem rec {
       inherit system;
       specialArgs = {
         inherit (nixpkgs) lib;
-        inherit inputs;
+        inherit inputs pkgs;
       };
 
       modules = [
@@ -31,7 +38,7 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
     };
   };
   homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    pkgs = nixpkgs.legacyPackages.${system};
+    inherit pkgs;
     modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${system}.default ]; } ];
     extraSpecialArgs = {
       inherit system inputs;

@@ -3,6 +3,7 @@ lib,
 inputs,
 pkgs,
 options,
+nixpkgs,
 ...
 }: 
 let
@@ -51,9 +52,6 @@ in
     extraGroups = ["networkmanager" "wheel" "video" "kvm"];
     packages = with pkgs; [];
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Programs
   programs = {
