@@ -1,7 +1,8 @@
 {pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    kdePackages.sddm 
+    kdePackages.sddm sddm 
+    sddm-chili-theme
     where-is-my-sddm-theme
     (catppuccin-sddm.override {
       flavor = "mocha";
@@ -11,12 +12,12 @@
       #loginBackground = true;
     })
   ];
-  services.displayManager.sddm = {
+  services.xserver.displayManager.sddm = {
     enable = true;
     autoNumlock = true;
     enableHidpi = true;
     wayland.enable = true;
-    theme = "catppuccin-mocha";
-    package = pkgs.kdePackages.sddm;
+    theme = "chili";
+    package = pkgs.sddm;
   };
 }
