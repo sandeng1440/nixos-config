@@ -43,15 +43,6 @@ NIX_CONFIG="experimental-features = nix-command flakes"
 sudo nixos-rebuild switch --flake .#<hostname>
 ```
 
-Rebuild the home-manager configuration. For this command to succeed, delete `~/.icons/`,`~/.gtkrc-2.0`,
-`~/.config/gtk-3.0/`, `~/.config/gtk-4.0/`
-> `rm -rf ~/.icons ~/.gtkrc-2.0 ~/.config/gtk-3.0 ~/.config/gtk-4.0`
-
-```
-home-manager switch --flake .
-```
-
-
 > [!IMPORTANT]
 > THE FOLLOWING WILL DELETE SOME OF YOUR FILES. PROCEED WITH CAUTION. 
 
