@@ -37,7 +37,7 @@ in
     transmission_4-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
     lagrange lavat localsend obs-studio obsidian
-    cargo rustup
+    cargo rustup mission-center
 
     ## Other Hyprdots dependencies
     hyprland waybar xwayland cliphist alacritty swww
