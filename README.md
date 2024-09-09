@@ -28,14 +28,14 @@ git clone --depth=1 https://github.com/sandeng1440/nixos-config ~/nixos-config
 cd nixos-config
 ```
 
-Change the user variables i.e **username, hostname, etc** inside the `flake.nix` file.
+Change the user variables i.e **username, hostname, etc** inside the `variables.nix` file.
 ```
-nvim flake.nix
+nvim variables.nix
 ```
 While inside the clone directory,
 generate the hardware configuration file.
 ```
-nixos-generate-config --show-hardware-config > host/hardware.nix
+nixos-generate-config --show-hardware-config > system/hardware.nix
 ```
 Then rebuild the system. (Replace `<hostname>` with your hostname)
 ```
