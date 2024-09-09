@@ -8,9 +8,9 @@ let
 in
 {
 imports = [
-  ./home-nix.nix
+  #./home-nix.nix
 ];
-home = 
+home =
 let
   zen = inputs.zen-browser.packages."${system}".generic;
 in

@@ -14,12 +14,10 @@ in
     lld gcc glibc clang udev llvmPackages.bintools
     wget procps killall zip unzip bluez busybox
     bluez-tools brightnessctl light xdg-utils
-    pipewire wireplumber alsaLib pkg-config
-    kdePackages.qtsvg usbutils lxqt.lxqt-policykit    
-    home-manager
+    pkg-config
+    kdePackages.qtsvg usbutils lxqt.lxqt-policykit
 
     #### Standard Packages
-    networkmanager networkmanagerapplet
     git fzf vim tldr sox yad flatpak
     ffmpeg neovim
 
@@ -39,10 +37,7 @@ in
     transmission_4-gtk slurp vlc mpv krabby
     zellij shellcheck thefuck gthumb cmatrix
     lagrange lavat localsend obs-studio obsidian
-
-    ## Xorg Libraries
-    xorg.libX11
-    xorg.libXcursor
+    cargo rustup
 
     ## Other Hyprdots dependencies
     hyprland waybar xwayland cliphist alacritty swww

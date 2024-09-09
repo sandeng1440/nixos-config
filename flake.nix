@@ -20,30 +20,30 @@ outputs = inputs@{ self, nixpkgs, devenv, home-manager, zen-browser, ... }:
       };
 
       modules = [
-        ./host/default.nix
-        #inputs.home-manager.nixosModules.home-manager {
-          #home-manager = {
-            #useGlobalPkgs = true;
-            #useUserPackages = true;
-            #backupFileExtension = "backup";
-            #users.${username} = import ./host/home.nix;
-            #extraSpecialArgs = {
-              #inherit username locale timezone;
-              #inherit hostname gitUsername gitEmail;
-              #inherit inputs system stateVersion;
-            #};
-          #};
-        #}
+        ./system
+        inputs.home-manager.nixosModules.home-manager {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+            users.${username} = import ./home;
+            extraSpecialArgs = {
+              inherit inputs;
+            };
+          };
+        }
       ];
     };
   };
-  homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-    inherit pkgs;
-    modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${system}.default ]; } ];
-    extraSpecialArgs = {
-      inherit system inputs;
-    };
-  };
+
+  # Standalone home-manager
+  #homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+    #inherit pkgs;
+    #modules = [ ./home-manager/home.nix { home.packages = [ devenv.outputs.packages.${system}.default ]; } ];
+    #extraSpecialArgs = {
+      #inherit system inputs;
+    #};
+  #};
 };
 
 inputs = {

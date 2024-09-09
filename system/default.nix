@@ -52,6 +52,7 @@ in
     extraGroups = ["networkmanager" "wheel" "video" "kvm"];
     packages = with pkgs; [];
   };
+  users.mutableUsers = true;
 
   # Programs
   programs = {
@@ -73,6 +74,10 @@ in
         plugins = [ "git" "history" ];
       };
     };
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
     firefox.enable = true;
     dconf.enable = true;
     seahorse.enable = true;
@@ -83,9 +88,6 @@ in
       enable = true;
       plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman ];
     };
-  };
-  users = {
-    mutableUsers = true;
   };
 
   # Services to start
@@ -116,7 +118,7 @@ in
     rpcbind.enable = true;
     nfs.server.enable = true;
     blueman.enable = true;
-  };  
+  };
 
   # Virtualization / Containers
   virtualisation.libvirtd.enable = true;
