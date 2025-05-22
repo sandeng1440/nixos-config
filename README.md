@@ -1,4 +1,7 @@
 # NixOS Flake for Hyprdots
+> [!WARNING]
+> The information below about HyDE may be outdated. Consult the [HyDE](https://github.com/HyDE-Project/HyDE) repo for the latest information.
+
 This flake has been made specifically to try and bring [Hyprdots](https://github.com/prasanthrangan/hyprdots) to NixOS. To make it work, I had to abandon some reproducible parts of the nix flake such as the gtk theme. 
 
 So far, I have successfully setup hyprdots from the git repo without making big modifications to the hyprdots repo. The most significant modification made is to the `~/.config/hypr/keybindings.conf` so that waybar plays nice. I'll write a bash script to install the dots soon. For now, I'm still working on the flake.
