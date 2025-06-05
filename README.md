@@ -1,6 +1,8 @@
 # NixOS Flake for Hyprdots
-> [!WARNING]
-> The information below about HyDE may be outdated. Consult the [HyDE](https://github.com/HyDE-Project/HyDE) repo for the latest information.
+> [!CAUTION]
+> The information below about HyDE is outdated. I have not updated it for a few months and since then, [Hyprdots](https://github.com/prasanthrangan/hyprdots) was archived and HyDE has become more coupled to non-nix systems.
+> I don't recommend using this, but if you want to, go look through the releases of HyDE for the one that has Hyde-cli tool.
+> Consult the [HyDE](https://github.com/HyDE-Project/HyDE) repo for the latest information.
 
 This flake has been made specifically to try and bring [Hyprdots](https://github.com/prasanthrangan/hyprdots) to NixOS. To make it work, I had to abandon some reproducible parts of the nix flake such as the gtk theme. 
 
