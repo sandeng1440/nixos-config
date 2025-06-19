@@ -1,0 +1,20 @@
+{pkgs, ...}:{
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    withNodeJs = true;
+    vimAlias = true;
+    viAlias = true;
+    package = pkgs.neovim-unwrapped;
+    plugins = with pkgs; [
+      vimPlugins.LazyVim vimPlugins.nvim-treesitter
+    ];
+    extraLuaPackages = ps: [ ps.magick ];
+    extraPackages = with pkgs; [
+      lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
+      lazygit lazygit
+      rustup cargo
+      go python3Full
+    ];
+  };
+}
