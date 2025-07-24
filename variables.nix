@@ -5,8 +5,8 @@
 # NOTE: Make sure you are in this flake's directory.
 
 {
-  username = "santiago";
-  fullname= "Santiago";
+  username = "deng";
+  fullname= "Deng";
   hostname = "nixos";
   gitUsername = "sandeng1440";
   gitEmail = "sandeng1440@gmail.com";
