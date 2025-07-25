@@ -9,7 +9,7 @@
     plugins = with pkgs; [
       vimPlugins.LazyVim vimPlugins.nvim-treesitter
     ];
-    extraLuaPackages = ps: [ ps.magick ];
+    # extraLuaPackages = ps: [ ps.magick ];
     extraPackages = with pkgs; [
       gnutar gzip curl wget
       lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
