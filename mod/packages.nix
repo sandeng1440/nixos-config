@@ -7,6 +7,7 @@
     lutris
     wezterm
     libreoffice-fresh
+    zoom-us
 
     # security
     aircrack-ng
@@ -15,6 +16,7 @@
 
   programs = {
     neovim.enable = true;
+    zsh.enable = true;
     localsend = {
       enable = true;
       openFirewall = true;
