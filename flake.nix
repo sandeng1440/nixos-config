@@ -19,6 +19,7 @@
           inherit inputs;
         };
         modules = [
+          nix-flatpak.nixosModules.nix-flatpak
           ./sys/configuration.nix
         ];
       };
