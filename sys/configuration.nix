@@ -10,6 +10,7 @@ in
     ../mod/fonts.nix
     ../mod/users.nix
     ../mod/services.nix
+    ../mod/neovim.nix
     ../mod/security.nix
     ../mod/session-vars.nix
     ../mod/keepassxc.nix
