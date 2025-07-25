@@ -6,9 +6,9 @@
     vimAlias = true;
     viAlias = true;
     package = pkgs.neovim-unwrapped;
-    plugins = with pkgs; [
-      vimPlugins.LazyVim vimPlugins.nvim-treesitter
-    ];
+    # plugins = with pkgs; [
+    #   vimPlugins.LazyVim vimPlugins.nvim-treesitter
+    # ];
     # extraLuaPackages = ps: [ ps.magick ];
     # extraPackages = with pkgs; [
     #   gnutar gzip curl wget
@@ -19,7 +19,7 @@
     # ];
   };
   environment.systemPackages = with pkgs; [
-    gnutar gzip curl wget
+    gnutar gzip curl wget gcc
     lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
     lazygit lazygit
     rustup cargo
