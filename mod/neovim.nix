@@ -10,12 +10,19 @@
       vimPlugins.LazyVim vimPlugins.nvim-treesitter
     ];
     # extraLuaPackages = ps: [ ps.magick ];
-    extraPackages = with pkgs; [
-      gnutar gzip curl wget
-      lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
-      lazygit lazygit
-      rustup cargo
-      go python3Full
-    ];
+    # extraPackages = with pkgs; [
+    #   gnutar gzip curl wget
+    #   lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
+    #   lazygit lazygit
+    #   rustup cargo
+    #   go python3Full
+    # ];
   };
+  environment.systemPackages = with pkgs; [
+    gnutar gzip curl wget
+    lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
+    lazygit lazygit
+    rustup cargo
+    go python3Full
+  ];
 }
