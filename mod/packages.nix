@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    flatpak
+    (pkgs.flatpak.override {
+      package = "us.zoom.Zoom";
+    })
     jq
     git
     wget
@@ -7,7 +11,7 @@
     lutris
     wezterm
     libreoffice-fresh
-    zoom-us
+    # zoom-us
 
     # security
     aircrack-ng

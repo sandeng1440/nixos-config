@@ -3,13 +3,21 @@
   # services.xserver.enable = true;
   services.openssh.enable = true;
   services.printing.enable = false;
-  services.flatpak.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.devmon.enable = true;
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.power-profiles-daemon.enable = true;
+  services.flatpak = {
+    enable = true;
+    extraRepositories = [
+      {
+        name = "flathub";
+        url = "https://flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
+  };
 
   services.pipewire = {
     enable = true;
