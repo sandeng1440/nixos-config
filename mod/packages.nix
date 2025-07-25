@@ -1,9 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    flatpak
-    (pkgs.flatpak.override {
-      package = "us.zoom.Zoom";
-    })
     jq
     git
     wget

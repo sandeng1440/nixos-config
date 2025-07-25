@@ -6,6 +6,7 @@ in
     ./hardware.nix
     ../mod/nix-settings.nix
     ../mod/packages.nix
+    ../mod/flatpak-packages.nix
     ../mod/fonts.nix
     ../mod/users.nix
     ../mod/services.nix

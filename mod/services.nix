@@ -11,12 +11,6 @@
   services.power-profiles-daemon.enable = true;
   services.flatpak = {
     enable = true;
-    # extraRepositories = [
-    #   {
-    #     name = "flathub";
-    #     url = "https://flathub.org/repo/flathub.flatpakrepo";
-    #   }
-    # ];
   };
 
   services.pipewire = {
