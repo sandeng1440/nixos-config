@@ -1,6 +1,6 @@
 {
   description = "Latest try at hyprland ricing on nixos.";
-  outputs = inputs@{ self, nixpkgs, zen-browser, niri, hyprland, home-manager, devenv,... }:
+  outputs = inputs@{ self, nixpkgs, zen-browser, niri, hyprland, home-manager, devenv, nix-flatpak, ... }:
     let 
       inherit (import ./variables.nix) username system hostname;
       pkgs = import inputs.nixpkgs {
