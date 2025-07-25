@@ -22,6 +22,7 @@
       openFirewall = true;
     };
     firefox.enable = true;
+    starship.enable = true;
     fish ={
       enable = true;
       interactiveShellInit = ''
