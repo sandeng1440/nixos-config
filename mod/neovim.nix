@@ -19,6 +19,7 @@
     # ];
   };
   environment.systemPackages = with pkgs; [
+    lua51Packages.lua
     luajitPackages.luarocks-nix
     vimPlugins.nvim-treesitter.withAllGrammars
     gnutar gzip curl wget gcc
