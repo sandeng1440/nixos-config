@@ -6,17 +6,6 @@
     vimAlias = true;
     viAlias = true;
     package = pkgs.neovim-unwrapped;
-    # plugins = with pkgs; [
-    #   vimPlugins.LazyVim vimPlugins.nvim-treesitter
-    # ];
-    # extraLuaPackages = ps: [ ps.magick ];
-    # extraPackages = with pkgs; [
-    #   gnutar gzip curl wget
-    #   lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
-    #   lazygit lazygit
-    #   rustup cargo
-    #   go python3Full
-    # ];
   };
   environment.systemPackages = with pkgs; [
     lua51Packages.lua
