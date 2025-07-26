@@ -19,6 +19,7 @@
     # ];
   };
   environment.systemPackages = with pkgs; [
+    luajitPackages.luarocks-nix
     vimPlugins.nvim-treesitter.withAllGrammars
     gnutar gzip curl wget gcc
     lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
