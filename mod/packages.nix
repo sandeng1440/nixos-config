@@ -7,7 +7,6 @@
     lutris
     wezterm
     libreoffice-fresh
-    # zoom-us
 
     # security
     aircrack-ng
