@@ -3,6 +3,7 @@
   fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [
     liberation_ttf
+    dejavu_fonts
     dm-sans
     google-fonts
     noto-fonts
