@@ -15,7 +15,6 @@
     lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
     lazygit lazygit
     rustup
-    lua
     go python3Full
   ];
 }
