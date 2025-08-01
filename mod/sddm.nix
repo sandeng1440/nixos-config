@@ -3,6 +3,7 @@
     enable = true;
     wayland.enable = true;
     theme = "sddm-astronaut-theme";
+    embeddedTheme = "post-apocalyptic_hacker";
   };
   environment.systemPackages = with pkgs; [
     kdePackages.qtmultimedia
@@ -12,8 +13,6 @@
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
 
-    (pkgs.sddm-astronaut.override {
-      embeddedTheme = "post-apocalyptic_hacker";
-    })
+    sddm-astronaut
   ];
 }
