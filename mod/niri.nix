@@ -8,6 +8,7 @@
 
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
+    fuzzel
     fastfetch
     networkmanagerapplet
     # xfce.mousepad
