@@ -8,6 +8,7 @@
 
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
+    swaylock-effects
     fuzzel
     fastfetch
     networkmanagerapplet
