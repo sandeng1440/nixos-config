@@ -13,7 +13,7 @@
     libsForQt5.qt5.qtquickcontrols2
 
     (pkgs.sddm-astronaut.override {
-      embeddedTheme.General = "post-apocalyptic_hacker";
+      embeddedTheme = "black_hole";
     })
   ];
 }
