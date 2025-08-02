@@ -2,7 +2,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "sddm-astronaut-theme";
+    theme = "Elegant";
   };
   environment.systemPackages = with pkgs; [
     kdePackages.qtmultimedia
@@ -11,10 +11,11 @@
     kdePackages.qt5compat
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
+    elegant-sddm
 
     # sddm-astronaut
-    (pkgs.sddm-astronaut.override {
-      embeddedTheme = "black_hole";
-    })
+    # (pkgs.sddm-astronaut.override {
+    #   embeddedTheme = "black_hole";
+    # })
   ];
 }
