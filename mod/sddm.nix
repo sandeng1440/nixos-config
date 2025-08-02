@@ -2,7 +2,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "Elegant";
+    theme = "where_is_my_sddm_theme";
   };
   environment.systemPackages = with pkgs; [
     kdePackages.qtmultimedia
@@ -12,6 +12,7 @@
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
     elegant-sddm
+    where-is-my-sddm-theme
 
     # sddm-astronaut
     # (pkgs.sddm-astronaut.override {
