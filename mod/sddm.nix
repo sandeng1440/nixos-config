@@ -12,7 +12,8 @@
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
 
-    (pkgs.sddm-astronaut.override {
+    # sddm-astronaut
+    (pkgs.sddm-astronaut {
       embeddedTheme = "astronaut";
     })
   ];
