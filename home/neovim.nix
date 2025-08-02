@@ -14,7 +14,7 @@
       gnutar gzip curl wget
       lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
       lazygit lazygit
-      rustup cargo
+      rustc cargo
       go python3Full
     ];
   };
