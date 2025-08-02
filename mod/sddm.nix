@@ -5,7 +5,7 @@
     autoNumlock = true;
     theme = "Elegant";
     package = pkgs.kdePackages.sddm;
-    extraPackages = [
+    extraPackages = with pkgs; [
       kdePackages.qtmultimedia
       kdePackages.qtvirtualkeyboard
       kdePackages.qtsvg
