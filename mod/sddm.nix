@@ -13,7 +13,7 @@
     libsForQt5.qt5.qtquickcontrols2
 
     # sddm-astronaut
-    (pkgs.sddm-astronaut {
+    (pkgs.sddm-astronaut.override {
       embeddedTheme = "black_hole";
     })
   ];
