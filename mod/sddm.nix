@@ -14,7 +14,7 @@
 
     # sddm-astronaut
     (pkgs.sddm-astronaut {
-      embeddedTheme = "astronaut";
+      embeddedTheme = "black_hole";
     })
   ];
 }
