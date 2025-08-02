@@ -5,7 +5,6 @@
     withNodeJs = true;
     vimAlias = true;
     viAlias = true;
-    package = pkgs.neovim-unwrapped;
   };
   environment.systemPackages = with pkgs; [
     lua51Packages.lua
@@ -14,7 +13,7 @@
     vimPlugins.nvim-treesitter.withAllGrammars
     gnutar gzip curl wget gcc
     lua imagemagick git fd ripgrep gcc nodejs_24 gnumake unzip
-    lazygit lazygit
+    lazygit
     cargo rustc
     go python3Full
   ];
