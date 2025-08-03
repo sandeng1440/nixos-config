@@ -5,7 +5,7 @@
     liberation_ttf
     dejavu_fonts
     dm-sans
-    google-fonts
+    # google-fonts
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
