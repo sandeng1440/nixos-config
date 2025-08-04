@@ -2,41 +2,41 @@
 let inherit (import ../variables.nix) username gitEmail gitUsername stateVersion;
 in{
   imports = [
-    ./neovim.nix
+    # ./neovim.nix
     # ./systemd-units.nix
-    ./packages.nix
+    # ./packages.nix
     # ./hyprland.nix
-    ../dotfiles/dotfiles.nix
-    ./niri.nix
+    # ../dotfiles/dotfiles.nix
+    # ./niri.nix
   ];
 
 
   gtk = {
     enable = true;
-    theme = {
-      name = "Graphite-Dark";
-      package = pkgs.graphite-gtk-theme;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    font = {
-      name = "Radio Canada Regular";
-      size = 11;
-    };
+    # theme = {
+    #   name = "Graphite-Dark";
+    #   package = pkgs.graphite-gtk-theme;
+    # };
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
+    # font = {
+    #   name = "Radio Canada Regular";
+    #   size = 11;
+    # };
     cursorTheme = {
-      size = 18;
-      name = "graphite-dark";
-      package = pkgs.graphite-cursors;
+      size = 21;
+      # name = "graphite-dark";
+      # package = pkgs.graphite-cursors;
     };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    # platformTheme.name = "kde";
     style.name = "kvantum";
-    style.package = pkgs.graphite-kde-theme;
+    # style.package = pkgs.graphite-kde-theme;
   };
   fonts.fontconfig.enable = true;
   programs = {
@@ -51,9 +51,9 @@ in{
     pointerCursor = {
       enable = true;
       gtk.enable = true;
-      name = "graphite-dark";
-      package = pkgs.graphite-cursors;
-      size = 18;
+      # name = "graphite-dark";
+      # package = pkgs.graphite-cursors;
+      size = 21;
       x11.enable = true;
     };
     username = "${username}";

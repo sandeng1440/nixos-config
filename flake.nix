@@ -21,6 +21,19 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           ./sys/configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup";
+              users.${username} = import ./home/home.nix;
+              extraSpecialArgs = {
+                inherit inputs;
+              };
+            };
+          }
+
         ];
       };
 
