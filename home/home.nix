@@ -10,14 +10,12 @@ in{
     # ./niri.nix
   ];
 
-
   gtk = {
     enable = true;
     theme = {
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
-    iconCache.enable = true;
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
@@ -35,8 +33,8 @@ in{
 
   qt = {
     enable = true;
-    # platformTheme.name = "kde";
-    style.name = "kvantum";
+    platformTheme.name = "gtk";
+    # style.name = "kvantum";
     # style.package = pkgs.graphite-kde-theme;
   };
   fonts.fontconfig.enable = true;
