@@ -23,15 +23,14 @@
           ./sys/configuration.nix
 
           home-manager.nixosModules.home-manager {
-            home-manager.backupFileExtension = "bak";
+            home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            # home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home/home.nix;
             home-manager.extraSpecialArgs = {
               inherit inputs;
             };
           }
-
         ];
       };
     };
