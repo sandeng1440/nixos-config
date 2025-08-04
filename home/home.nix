@@ -13,18 +13,19 @@ in{
 
   gtk = {
     enable = true;
-    # theme = {
-    #   name = "Graphite-Dark";
-    #   package = pkgs.graphite-gtk-theme;
-    # };
-    # iconTheme = {
-    #   name = "Papirus-Dark";
-    #   package = pkgs.papirus-icon-theme;
-    # };
-    # font = {
-    #   name = "Radio Canada Regular";
-    #   size = 11;
-    # };
+    theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
+    };
+    iconCache.enable = true;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    font = {
+      name = "Adwaita Sans Regular";
+      size = 14;
+    };
     # cursorTheme = {
     #   size = 21;
     #   name = "graphite-dark";
@@ -50,7 +51,7 @@ in{
   home = {
     pointerCursor = {
       enable = true;
-      gtk.enable = true;
+      # gtk.enable = true;
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
       size = 21;
