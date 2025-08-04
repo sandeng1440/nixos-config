@@ -25,11 +25,11 @@ in{
     #   name = "Radio Canada Regular";
     #   size = 11;
     # };
-    cursorTheme = {
-      size = 21;
-      # name = "graphite-dark";
-      # package = pkgs.graphite-cursors;
-    };
+    # cursorTheme = {
+    #   size = 21;
+    #   name = "graphite-dark";
+    #   package = pkgs.graphite-cursors;
+    # };
   };
 
   qt = {
@@ -51,8 +51,8 @@ in{
     pointerCursor = {
       enable = true;
       gtk.enable = true;
-      # name = "graphite-dark";
-      # package = pkgs.graphite-cursors;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
       size = 21;
       x11.enable = true;
     };

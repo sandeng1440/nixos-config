@@ -42,6 +42,5 @@
     gtk_engines
     papirus-icon-theme
     adw-gtk3
-    bibata-cursors
   ];
 }
