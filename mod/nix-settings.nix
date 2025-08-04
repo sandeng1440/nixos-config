@@ -6,6 +6,7 @@
       options = "--delete-older-than 1d";
     };
     settings = {
+      auto-optimise-store = true;
       max-jobs = 1;
       cores = 1;
       experimental-features = ["nix-command" "flakes"];

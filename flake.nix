@@ -26,7 +26,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = "backup";
+              backupFileExtension = "bak";
               users.${username} = import ./home/home.nix;
               extraSpecialArgs = {
                 inherit inputs;
@@ -36,14 +36,14 @@
 
         ];
       };
-
-      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home/home.nix
-        ];
-      };
     };
+
+      # homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+      #   inherit pkgs;
+      #   modules = [
+      #     ./home/home.nix
+      #   ];
+      # };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
