@@ -1,45 +1,35 @@
 {
   description = "Latest try at hyprland ricing on nixos.";
   outputs = inputs@{ self, nixpkgs, zen-browser, niri, hyprland, home-manager, devenv, nix-flatpak, ... }:
-    let 
-      inherit (import ./variables.nix) username system hostname;
-      pkgs = import inputs.nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-          allowUnfreePredicate = (_: true);
-        };
-      };
-    in
-    {
-      nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit (nixpkgs) lib;
-          inherit inputs;
-        };
-        modules = [
-          nix-flatpak.nixosModules.nix-flatpak
-          ./sys/configuration.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.backupFileExtension = "backup";
-            home-manager.useGlobalPkgs = true;
-            # home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home/home.nix;
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-            };
-          }
-        ];
+  let 
+    inherit (import ./variables.nix) username system hostname;
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
       };
     };
+  in {
+    nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
+      inherit system;
+      specialArgs = {
+        inherit (nixpkgs) lib;
+        inherit inputs;
+      };
+      modules = [
+        nix-flatpak.nixosModules.nix-flatpak
+        ./sys/configuration.nix
+      ];
+    };
 
-      # homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
-      #   inherit pkgs;
-      #   modules = [
-      #     ./home/home.nix
-      #   ];
-      # };
+    homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [
+        ./home/home.nix
+      ];
+    };
+  };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
