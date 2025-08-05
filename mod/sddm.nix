@@ -5,7 +5,7 @@
     # wayland.compositor = "kwin";
     autoNumlock = true;
     theme = "Elegant";
-    package = pkgs.kdePackages.sddm;
+    # package = pkgs.kdePackages.sddm;
   };
   environment.systemPackages = with pkgs; [
     kdePackages.qtmultimedia
