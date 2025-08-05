@@ -22,7 +22,7 @@ in{
     };
     font = {
       name = "Adwaita Sans Regular";
-      size = 14;
+      size = 10;
     };
     # cursorTheme = {
     #   size = 21;
