@@ -21,7 +21,6 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           ./sys/configuration.nix
-
           home-manager.nixosModules.home-manager {
             home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;

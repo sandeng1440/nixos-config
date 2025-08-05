@@ -2,7 +2,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    wayland.compositor = "kwin";
+    # wayland.compositor = "kwin";
     autoNumlock = true;
     theme = "Elegant";
     package = pkgs.kdePackages.sddm;
