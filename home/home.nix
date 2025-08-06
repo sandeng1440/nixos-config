@@ -33,8 +33,8 @@ in{
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
-    # style.name = "kvantum";
+    platformTheme.name = "gtk2";
+    style.name = "kvantum";
     # style.package = pkgs.graphite-kde-theme;
   };
   fonts.fontconfig.enable = true;
