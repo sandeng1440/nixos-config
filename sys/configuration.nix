@@ -14,7 +14,7 @@ in
     ../mod/security.nix
     ../mod/session-vars.nix
     ../mod/keepassxc.nix
-    ../mod/sddm.nix
+    ../mod/display-manager.nix
     ../mod/zen-browser.nix
     ../mod/syncthing.nix
     ../mod/niri.nix
