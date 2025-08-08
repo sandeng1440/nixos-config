@@ -15,7 +15,7 @@
   # SDDM
   services.displayManager.sddm = {
     enable = true;
-    # wayland.enable = true;
+    wayland.enable = true;
     # wayland.compositor = "weston";
     autoNumlock = true;
     theme = "Elegant";
