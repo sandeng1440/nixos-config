@@ -1,9 +1,15 @@
 { pkgs, ... }: {
   # LightDM
-  services.xserver.enable = true;
-  services.xserver.displayManager.lightdm = {
+  services.xserver = {
     enable = true;
-    greeters.slick.enable = true;
+    layout = "uk";
+  };
+  services.xserver.displayManager = {
+    defaultSession = "none+niri";
+    lightdm = {
+      enable = true;
+      greeters.slick.enable = true;
+    };
   };
 
   # SDDM
