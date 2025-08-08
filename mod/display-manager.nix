@@ -5,7 +5,7 @@
     layout = "uk";
   };
   services.xserver.displayManager = {
-    defaultSession = "none+niri";
+    defaultSession = "niri";
     lightdm = {
       enable = true;
       greeters.slick.enable = true;
