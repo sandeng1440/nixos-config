@@ -8,11 +8,6 @@
     yazi
     lutris
     wezterm
-    libreoffice-fresh
-
-    # security
-    aircrack-ng
-    wifite2
   ];
 
   programs = {

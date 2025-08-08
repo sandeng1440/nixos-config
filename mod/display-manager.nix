@@ -1,31 +1,14 @@
 { pkgs, ... }: {
-  # LightDM
-  # services.xserver = {
-  #   enable = true;
-  #   xkb.layout = "gb";
-  # };
-  # services.displayManager.defaultSession = "niri";
-  # services.xserver.displayManager = {
-  #   lightdm = {
-  #     enable = true;
-  #     greeters.slick.enable = true;
-  #   };
-  # };
-
-  # SDDM
-  services.displayManager.sddm = {
+  services.xserver = {
     enable = true;
-    wayland.enable = true;
-    autoNumlock = true;
+    xkb.layout = "gb";
+  };
+  services.xserver.displayManager.sddm = {
+    enable = true;
+    defaultSession = "niri";
     theme = "chili";
   };
   environment.systemPackages = with pkgs; [
-    # kdePackages.qtmultimedia
-    # kdePackages.qtvirtualkeyboard
-    # kdePackages.qtsvg
-    # kdePackages.qt5compat
-    # libsForQt5.qt5.qtgraphicaleffects
-    # libsForQt5.qt5.qtquickcontrols2
     sddm-chili-theme
   ];
 }
