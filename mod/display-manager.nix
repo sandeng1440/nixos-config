@@ -8,6 +8,7 @@
     theme = "chili";
   };
   environment.systemPackages = with pkgs; [
+    libsForQt5.qt5.qtquickcontrols2
     sddm-chili-theme
   ];
 }
