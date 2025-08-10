@@ -3,10 +3,10 @@ let inherit (import ../variables.nix) username gitEmail gitUsername stateVersion
 in{
   imports = [
     ./packages.nix
+    ../dotfiles/dotfiles.nix
     # ./neovim.nix
     # ./systemd-units.nix
     # ./hyprland.nix
-    # ../dotfiles/dotfiles.nix
     # ./niri.nix
   ];
 

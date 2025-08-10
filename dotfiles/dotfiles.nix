@@ -5,19 +5,17 @@ let
 in {
   # home.file.".foo".source = config.lib.file.mkOutOfStoreSymlink ./some-source-file;
   home.file = {
-    ".config/niri/config.kdl".source = sym "${dir}/niri.config.kdl";
-    ".config/matugen".source = sym "${dir}/matugen";
-    ".config/kitty/kitty.conf".source = sym "${dir}/kitty.conf";
-    ".config/swaync".source = sym "${dir}/swaync";
+    ".config/niri".source = sym "${dir}/niri";
+    # ".config/matugen".source = sym "${dir}/matugen";
+    # ".config/kitty/kitty.conf".source = sym "${dir}/kitty.conf";
+    # ".config/swaync".source = sym "${dir}/swaync";
 
-# waybar
-    ".config/waybar/config.jsonc".source = sym "${dir}/waybar/config.jsonc";
-    ".config/waybar/style.css".source = sym "${dir}/waybar/style.css";
-    ".config/waybar/scripts".source = sym "${dir}/waybar/scripts";
+    # waybar
+    ".config/waybar".source = sym "${dir}/waybar";
 
-# rofi
-    ".config/rofi/config.rasi".source = sym "${dir}/rofi-config.rasi";
-    ".config/rofi/themes/material-you/material-you.rasi".source = sym "${dir}/rofi-themes-material-you.rasi";
+    # rofi
+    # ".config/rofi/config.rasi".source = sym "${dir}/rofi-config.rasi";
+    # ".config/rofi/themes/material-you/material-you.rasi".source = sym "${dir}/rofi-themes-material-you.rasi";
   };
 
   # scripts
