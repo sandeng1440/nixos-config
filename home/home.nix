@@ -5,7 +5,7 @@ in{
     ./packages.nix
     ../dotfiles/dotfiles.nix
     # ./neovim.nix
-    # ./systemd-units.nix
+    ./systemd-units.nix
     # ./hyprland.nix
     # ./niri.nix
   ];

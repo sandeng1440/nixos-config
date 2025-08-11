@@ -5,13 +5,13 @@ let
 in {
   # home.file.".foo".source = config.lib.file.mkOutOfStoreSymlink ./some-source-file;
   home.file = {
-    ".config/niri".source = sym "${dir}/niri";
-    # ".config/matugen".source = sym "${dir}/matugen";
+    ".config/niri/".source = sym "${dir}/.config/niri/";
+    ".config/matugen/".source = sym "${dir}/matugen/";
     # ".config/kitty/kitty.conf".source = sym "${dir}/kitty.conf";
-    # ".config/swaync".source = sym "${dir}/swaync";
+    # ".config/swaync/".source = sym "${dir}/swaync/";
 
     # waybar
-    ".config/waybar".source = sym "${dir}/waybar";
+    ".config/waybar/".source = sym "${dir}/.config/waybar/";
 
     # rofi
     # ".config/rofi/config.rasi".source = sym "${dir}/rofi-config.rasi";
@@ -59,6 +59,7 @@ in {
 
       # Set wallpaper, generate colors, and reload eww
       if [ -f "$SELECTED" ]; then
+        ${pkgs.swww}/bin/swww init
         ${pkgs.swww}/bin/swww img "''${SELECTED}" --transition-type="center" --transition-step=1 --transition-fps=60
         ${pkgs.matugen}/bin/matugen image "''${SELECTED}"
         ${pkgs.procps}/bin/pkill waybar

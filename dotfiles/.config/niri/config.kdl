@@ -255,6 +255,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "2"
 spawn-at-startup "xwayland-satellite" 
+spawn-at-startup "swww-daemon" 
 // spawn-at-startup "wlsunset" "-l" "-1.2" "-L" "36.8" "-t" "2000" "-T" "5500"
 spawn-at-startup "wlsunset" "-S" "7:00" "-s" "18:00" "-t" "3000" "-T" "5500"
 hotkey-overlay { skip-at-startup; }
@@ -352,6 +353,7 @@ binds {
   Super_L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
   Super+B { spawn "zen"; }
   Super+E { spawn "thunar"; }
+  Super+W { spawn "wallpaper-cycle"; }
 
   // You can also use a shell. Do this if you need pipes, multiple commands, etc.
   // Note: the entire command goes as a single argument in the end.
