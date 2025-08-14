@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+let inherit (import ../variables.nix) gitEmail gitUsername;
+in {
   environment.systemPackages = with pkgs; [
     tldr
     bun
@@ -11,6 +13,13 @@
   ];
 
   programs = {
+    git = {
+      enable = true;
+      config = {
+        user.name = gitUsername;
+        user.email = gitEmail;
+      };
+    };
     neovim.enable = true;
     zsh.enable = false;
     localsend = {

@@ -4,7 +4,7 @@
   "margin-top": 5,
   "modules-left": ["battery", "power-profiles-daemon", "cpu", "memory"],
   "modules-center": ["custom/notification"],
-  "modules-right": ["tray", "wireplumber", "backlight", "clock"],
+  "modules-right": ["network", "tray", "wireplumber", "backlight", "clock"],
   "height": 10,
 
   "tray": {
@@ -99,7 +99,7 @@
     "format": "{ifname}",
     "format-wifi": "{icon} {essid}",
     "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-    "format-disconnected": "󰤭 Disconnected",
+    "format-disconnected": "󰤭",
     "max-length": 50,
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "Connected to {essid}"

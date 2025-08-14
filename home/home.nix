@@ -4,8 +4,8 @@ in{
   imports = [
     ./packages.nix
     ../dotfiles/dotfiles.nix
+    # ./systemd-units.nix
     # ./neovim.nix
-    ./systemd-units.nix
     # ./hyprland.nix
     # ./niri.nix
   ];
@@ -37,15 +37,8 @@ in{
     style.name = "kvantum";
     # style.package = pkgs.graphite-kde-theme;
   };
+
   fonts.fontconfig.enable = true;
-  programs = {
-    git = {
-      enable = true;
-      userName = "${gitUsername}";
-      userEmail = "${gitEmail}";
-    };
-    home-manager.enable = true;
-  };
   home = {
     pointerCursor = {
       enable = true;
@@ -58,5 +51,6 @@ in{
     username = "${username}";
     homeDirectory = "/home/${username}";
   };
+  programs.home-manager.enable = true;
   home.stateVersion = "${stateVersion}";
 }
