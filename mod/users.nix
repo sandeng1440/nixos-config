@@ -9,7 +9,6 @@ in
     description = "${fullname}";
     extraGroups = [ "lp" "video" "networkmanager" "wheel" ];
     packages = with pkgs; [
-      neovim
     ];
   };
 }

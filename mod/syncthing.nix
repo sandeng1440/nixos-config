@@ -1,7 +1,6 @@
 {pkgs, ...}:
 let inherit (import ../variables.nix) username;
-in
-{
+in {
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
