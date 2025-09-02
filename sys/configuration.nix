@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 let inherit (import ../variables.nix) hostname keymap locale timezone stateVersion;
-in
-{
+in {
   imports = [
     ./hardware.nix
     ../mod/nix-settings.nix
@@ -18,6 +17,7 @@ in
     ../mod/zen-browser.nix
     ../mod/syncthing.nix
     ../mod/niri.nix
+    ../mod/games.nix
   ];
 
   gtk.iconCache.enable = true;
