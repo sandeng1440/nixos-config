@@ -9,7 +9,11 @@ in {
     wget
     yazi
     lutris
+    wineasio
+    winetricks
+    wineWowPackages.stable
     wezterm
+    kdePackages.okular
   ];
 
   programs = {
